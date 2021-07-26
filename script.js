@@ -24,8 +24,39 @@ function SearchPhotos() {
 
             div.innerHTML = results;
 
-           document.querySelector('#results').append(div);
+           document.querySelector('.carouselSlide').append(div);
         }
 
     })
+
+    //Carousel Related
+    const carouselSlide = document.querySelector('.carouselSlide');
+    const carouselImages = document.querySelectorAll('.carouselSlide img')
+
+    //Carousel buttons
+    const prevBtn = document.querySelector('#prevBtn');
+    const nextBtn = document.querySelector('#nextBtn');
+
+    //Counter 
+    let counter = 1;
+    const size = carouselImages[1].clientWidth;
+
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+
+    //Button Listeners
+    nextBtn.addEventListener('click',() => {
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter ++;
+        console.log(counter);
+        carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
+    })
+
+    prevBtn.addEventListener('click',() => {
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        counter --;
+        console.log(counter);
+        carouselSlide.style.transform = 'translateX(' + (size * counter) + 'px)';
+    })
+    
 }
+
