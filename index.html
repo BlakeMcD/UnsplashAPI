@@ -11,28 +11,32 @@
 </head>
 <body>
 
-<div class="hero">
-    <div class="heroText">
-        <h1>Find Five</h1>
-        <p id="heroParagraph">Search our photo database and view the top five picks</p>
-        <button>Search</button>
+    <div class="hero">
+        <div class="heroText">
+            <h1>Find Five</h1>
+            <p id="heroParagraph">Search our photo database and view the top five picks</p>
+            <input type="text" id="search" placeholder="Travel, people, retro cameras, and more...">
+            <button onclick="SearchPhotos()">Search</button>
+
+
+        </div>
     </div>
-</div>
 
-<div class="images">
-    <h2>Your Selection</h2>
-    <script>
-        fetch('https://api.unsplash.com/photos?client_id=llmyDAM46Iyjezu-cd3FCEOJJepSNekA7Tg1STQTwKY', function() {
-            console.log()        }
-        })
-    </script>
+    <div class="images">
+        <h2>Your Selection</h2>
+        <div id="results"></div>
 
+    </div>
 
-</div>
+    <div class="favourites"></div>
 
-<div class="favourites"></div>
+    <footer></footer>
 
-<footer></footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="script.js"></script>
 
 </body>
+
+
 </html>
