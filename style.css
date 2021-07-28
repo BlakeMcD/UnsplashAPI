@@ -47,16 +47,6 @@ body {
     height: auto;
 }
 
-/* Carousel Buttons */
-.buttons {
-    /* position: absolute;
-    top: 50%;
-    z-index: 10px;
-    font-size: 100px;
-    color: black;
-    cursor: pointer;
-    border: 5px solid black; */
-}
 
 #prevBtn {
     position: absolute;
@@ -73,6 +63,17 @@ body {
 #nextBtn {
     position: absolute;
     top: 50%;
+    z-index: 10px;
+    font-size: 100px;
+    color: black;
+    cursor: pointer;
+    right: 0;
+    border: 5px solid black;
+}
+
+#likeBtn {
+    position: absolute;
+    top: 0%;
     z-index: 10px;
     font-size: 100px;
     color: black;
