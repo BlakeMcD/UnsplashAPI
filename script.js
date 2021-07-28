@@ -53,8 +53,8 @@ nextBtn.addEventListener('click',() => {
     console.log(carouselImages)
 
     //Carousel buttons
-    const prevBtn = document.querySelector('#prevBtn');
-    const nextBtn = document.querySelector('#nextBtn');
+    //const prevBtn = document.querySelector('#prevBtn');
+    //const nextBtn = document.querySelector('#nextBtn');
 
     //only move if buttons are working
         if (buttonsWork === true) {
@@ -75,8 +75,8 @@ prevBtn.addEventListener('click',() => {
     console.log(carouselImages)
 
     //Carousel buttons
-    const prevBtn = document.querySelector('#prevBtn');
-    const nextBtn = document.querySelector('#nextBtn');
+    // const prevBtn = document.querySelector('#prevBtn');
+    // const nextBtn = document.querySelector('#nextBtn');
 
         //only move if buttons are working
         if (buttonsWork === true) {
@@ -91,4 +91,20 @@ prevBtn.addEventListener('click',() => {
     }
 })
     
+//Add Event listeners for like button
+likeBtn.addEventListener('click',() => {
+    {
+    const carouselImages = document.querySelectorAll('.carouselSlide img')
+    console.log(carouselImages)
 
+    //only move if buttons are working
+        if (buttonsWork === true) {
+            if (document.getElementById('likeBtn').name == "heart-outline") {
+                document.getElementById('likeBtn').name = "heart"
+            }
+            else {
+                document.getElementById('likeBtn').name = "heart-outline"
+            }
+        }
+    }
+})
