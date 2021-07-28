@@ -33,9 +33,7 @@ body {
     margin: 0px;
     box-sizing: border-box;
 
-    /* width: 60%; */
     width: 1000px;
-    /* max-width: 600px, */
     margin: auto;
     overflow: hidden;
     border: 5px solid black;

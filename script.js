@@ -58,11 +58,12 @@ nextBtn.addEventListener('click',() => {
 
     //only move if buttons are working
         if (buttonsWork === true) {
-        counter ++;
-        console.log(counter);
-        translate -= size;
-        carouselSlide.style.transform = 'translateX(' + translate + 'px)';
-        console.log(carouselImages[counter])
+            if (counter >= 5) return; //so it can't scroll past 5
+            counter ++;
+            console.log(counter);
+            translate -= size;
+            carouselSlide.style.transform = 'translateX(' + translate + 'px)';
+            console.log(carouselImages[counter])
         }
     }
 })
@@ -78,11 +79,12 @@ prevBtn.addEventListener('click',() => {
 
         //only move if buttons are working
         if (buttonsWork === true) {
-        counter --;
-        console.log(counter);
-        translate += size;
-        carouselSlide.style.transform = 'translateX(' + translate + 'px)';
-        console.log(carouselImages[counter])
+            if (counter <= 1) return; //so it can't scroll below 0
+            counter --;
+            console.log(counter);
+            translate += size;
+            carouselSlide.style.transform = 'translateX(' + translate + 'px)';
+            console.log(carouselImages[counter])
         }
     }
 })
