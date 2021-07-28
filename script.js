@@ -1,5 +1,8 @@
 
+//Register Movement
+let buttonsWork = false;
 
+//Search Photos Function 
 function searchPhotos() {
     let clientId = "llmyDAM46Iyjezu-cd3FCEOJJepSNekA7Tg1STQTwKY";
     let query = document.getElementById("search").value;
@@ -28,60 +31,15 @@ function searchPhotos() {
 
            document.querySelector('.carouselSlide').append(div);
         }
-        initialiseCarousel();
+        //make previous and next buttons clickable
+        buttonsWork = true;
     }) 
 }
 
-//test
-let carouselInitialised = false;
 
-const initialiseCarousel = function() {
-
-    //test 
-    carouselInitialised = true;
-
-    //Carousel Related
-    // const carouselSlide = document.querySelector('.carouselSlide');
-    // const carouselImages = document.querySelectorAll('.carouselSlide img')
-    // console.log(carouselImages)
-
-    // //Carousel buttons
-    // const prevBtn = document.querySelector('#prevBtn');
-    // const nextBtn = document.querySelector('#nextBtn');
-
-    // //Counter 
-    // let counter = 1;
-    // const size = carouselImages[1].clientWidth;
-
-    // //carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    // carouselSlide.style.transition = "";
-
-    // //carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    // carouselSlide.style.transform = "translateX(0px)";
-
-
-
-    // //Button Listeners
-    // nextBtn.addEventListener('click',() => {
-    //     //carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    //     counter ++;
-    //     console.log(counter);
-    //     carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    //     console.log(carouselImages[counter])
-    // })
-
-    // prevBtn.addEventListener('click',() => {
-    //     //carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    //     counter --;
-    //     console.log(counter);
-    //     carouselSlide.style.transform = 'translateX(' + (size * counter) - 'px)';
-    //     console.log(carouselImages[counter])
-    // })
-}
 
 const carouselSlide = document.querySelector('.carouselSlide');
 let counter = 1;
-//const size = carouselImages[0].clientWidth;
 const size = 600;
 
 carouselSlide.style.transition = "";
@@ -89,39 +47,30 @@ carouselSlide.style.transform = "translateX(0px)";
 
 let translate = 0;
 
-//Button Listeners
-var buttonListener = document.getElementsByClassName("buttons");
+//var buttonListener = document.getElementsByClassName("buttons");
 
 nextBtn.addEventListener('click',() => {
-    //if (carouselInitialised = true)
-    {//carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    {
 
-        
-        const carouselImages = document.querySelectorAll('.carouselSlide img')
-        console.log(carouselImages)
-    
-        //Carousel buttons
-        const prevBtn = document.querySelector('#prevBtn');
-        const nextBtn = document.querySelector('#nextBtn');
-    
-        //Counter 
-    
-        //carouselSlide.style.transition = "transform 0.4s ease-in-out";
-        //carouselSlide.style.transition = "";
-    
-        //carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-        //carouselSlide.style.transform = "translateX(0px)";
+    const carouselImages = document.querySelectorAll('.carouselSlide img')
+    console.log(carouselImages)
 
-    counter ++;
-    console.log(counter);
-    translate -= size;
-    carouselSlide.style.transform = 'translateX(' + translate + 'px)';
-    console.log(carouselImages[counter])
+    //Carousel buttons
+    const prevBtn = document.querySelector('#prevBtn');
+    const nextBtn = document.querySelector('#nextBtn');
+
+    //only move if buttons are working
+        if (buttonsWork === true) {
+        counter ++;
+        console.log(counter);
+        translate -= size;
+        carouselSlide.style.transform = 'translateX(' + translate + 'px)';
+        console.log(carouselImages[counter])
+        }
     }
 })
 
 prevBtn.addEventListener('click',() => {
-    //if (carouselInitialised = true)
     {
     const carouselImages = document.querySelectorAll('.carouselSlide img')
     console.log(carouselImages)
@@ -130,21 +79,14 @@ prevBtn.addEventListener('click',() => {
     const prevBtn = document.querySelector('#prevBtn');
     const nextBtn = document.querySelector('#nextBtn');
 
-    //Counter 
-
-
-    //carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    //carouselSlide.style.transition = "";
-
-    //carouselSlide.style.transform = 'translateX(' + (-size * counter) + 'px)';
-    //carouselSlide.style.transform = "translateX(0px)";
-
-    //carouselSlide.style.transition = "transform 0.4s ease-in-out";
-    counter --;
-    console.log(counter);
-    translate += size;
-    carouselSlide.style.transform = 'translateX(' + translate + 'px)';
-    console.log(carouselImages[counter])
+        //only move if buttons are working
+        if (buttonsWork === true) {
+        counter --;
+        console.log(counter);
+        translate += size;
+        carouselSlide.style.transform = 'translateX(' + translate + 'px)';
+        console.log(carouselImages[counter])
+        }
     }
 })
     
