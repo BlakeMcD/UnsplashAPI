@@ -62,6 +62,7 @@ nextBtn.addEventListener('click',() => {
             counter ++;
             console.log(counter);
             translate -= size;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
             carouselSlide.style.transform = 'translateX(' + translate + 'px)';
             console.log(carouselImages[counter])
         }
@@ -83,6 +84,7 @@ prevBtn.addEventListener('click',() => {
             counter --;
             console.log(counter);
             translate += size;
+            carouselSlide.style.transition = "transform 0.4s ease-in-out";
             carouselSlide.style.transform = 'translateX(' + translate + 'px)';
             console.log(carouselImages[counter])
         }
