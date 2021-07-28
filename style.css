@@ -30,7 +30,7 @@
     box-sizing: border-box;
 
     /*width: 60%; */
-    width: 1200px;
+    max-width: 1000px;
     margin: auto;
     /*overflow: hidden; */
     border: 5px solid black;
