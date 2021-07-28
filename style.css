@@ -37,10 +37,46 @@ body {
     margin: auto;
     overflow: hidden;
     border: 5px solid black;
+
+    position: relative;
 }
 
 .carouselSlide {
     display: flex;
     width: 1000px; 
     height: auto;
+}
+
+/* Carousel Buttons */
+.buttons {
+    /* position: absolute;
+    top: 50%;
+    z-index: 10px;
+    font-size: 100px;
+    color: black;
+    cursor: pointer;
+    border: 5px solid black; */
+}
+
+#prevBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10px;
+    font-size: 100px;
+    color: black;
+    cursor: pointer;
+    border: 5px solid black;
+    left: 0;
+
+}
+
+#nextBtn {
+    position: absolute;
+    top: 50%;
+    z-index: 10px;
+    font-size: 100px;
+    color: black;
+    cursor: pointer;
+    right: 0;
+    border: 5px solid black;
 }
