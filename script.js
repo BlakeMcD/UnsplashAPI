@@ -37,21 +37,18 @@ function searchPhotos() {
 }
 
 
-
+//Initialise Variables about Slideshow movement
 const carouselSlide = document.querySelector('.carouselSlide');
+const size = 1100;
+let translate = 0;
 let counter = 1;
-const size = 600;
 
 carouselSlide.style.transition = "";
 carouselSlide.style.transform = "translateX(0px)";
 
-let translate = 0;
-
-//var buttonListener = document.getElementsByClassName("buttons");
-
+//Add Event listeners for prev/next buttons, and sort out movement
 nextBtn.addEventListener('click',() => {
     {
-
     const carouselImages = document.querySelectorAll('.carouselSlide img')
     console.log(carouselImages)
 
