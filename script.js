@@ -2,12 +2,28 @@
 //Register Movement
 let buttonsWork = false;
 
+//remove Section function
+removePics = function() {
+    const parent = document.querySelector('.carouselSlide');
+    const photosExist = document.getElementById("photos");
+    if (photosExist !== null)
+    {
+        while (photosExist) {
+            photosExist.parentNode.removeChild(photosExist);
+        };
+    //remove()
+    };
+}
+
 //Search Photos Function 
 function searchPhotos() {
     let clientId = "llmyDAM46Iyjezu-cd3FCEOJJepSNekA7Tg1STQTwKY";
     let query = document.getElementById("search").value;
 
     let url = "https://api.unsplash.com/search/photos?client_id="+clientId+"&query="+query;
+
+    //test - remove anything that exists
+    removePics();
 
     //make API request
 
@@ -25,9 +41,11 @@ function searchPhotos() {
             const results = `
             <img src="${photo.urls.regular}">
             <a href="${photo.links.download}">
+
             `;
 
             div.innerHTML = results;
+            div.id = "photos";
 
            document.querySelector('.carouselSlide').append(div);
         }
@@ -52,9 +70,6 @@ nextBtn.addEventListener('click',() => {
     const carouselImages = document.querySelectorAll('.carouselSlide img')
     console.log(carouselImages)
 
-    //Carousel buttons
-    //const prevBtn = document.querySelector('#prevBtn');
-    //const nextBtn = document.querySelector('#nextBtn');
 
     //only move if buttons are working
         if (buttonsWork === true) {
@@ -74,9 +89,6 @@ prevBtn.addEventListener('click',() => {
     const carouselImages = document.querySelectorAll('.carouselSlide img')
     console.log(carouselImages)
 
-    //Carousel buttons
-    // const prevBtn = document.querySelector('#prevBtn');
-    // const nextBtn = document.querySelector('#nextBtn');
 
         //only move if buttons are working
         if (buttonsWork === true) {
@@ -100,7 +112,17 @@ likeBtn.addEventListener('click',() => {
     //only move if buttons are working
         if (buttonsWork === true) {
             if (document.getElementById('likeBtn').name == "heart-outline") {
-                document.getElementById('likeBtn').name = "heart"
+                document.getElementById('likeBtn').name = "heart" //change icon
+
+
+                //add photos to favourites section 
+                const photos = document.getElementById("photos");
+                console.log(photos.src); //test
+
+                let photosClone = photos.cloneNode(true);
+                document.querySelector('#h2Favourites').append(photosClone);  //this works, but moves the OG file. Need to create copy. 
+
+
             }
             else {
                 document.getElementById('likeBtn').name = "heart-outline"

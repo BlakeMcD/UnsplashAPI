@@ -19,3 +19,7 @@ https://api.unsplash.com/photos?client_id=llmyDAM46Iyjezu-cd3FCEOJJepSNekA7Tg1ST
 client id: llmyDAM46Iyjezu-cd3FCEOJJepSNekA7Tg1STQTwKY
 
 https://api.unsplash.com/search/collections?page=1&query=office
+
+
+Empty Heart: <ion-icon name="heart-outline"></ion-icon>
+Filled Heart: <ion-icon name="heart"></ion-icon>
