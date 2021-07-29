@@ -11,8 +11,15 @@ removePics = function() {
         while (photosExist) {
             photosExist.parentNode.removeChild(photosExist);
         };
-    //remove()
     };
+    // const parent = document.querySelector('.carouselSlide');
+    // const photosExist = document.getElementById("photos");
+    // if (photosExist !== null)
+    // {
+    //     while (photosExist) {
+    //         photosExist.parentNode.removeChild(photosExist);
+    //     };
+    // };
 }
 
 //Search Photos Function 
