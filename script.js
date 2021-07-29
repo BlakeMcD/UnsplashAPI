@@ -4,7 +4,7 @@ let buttonsWork = false;
 
 //Initialise Variables about Slideshow movement
 const carouselSlide = document.querySelector('.carouselSlide');
-const size = 1100;
+const size = 600;
 let translate = 0;
 let counter = 1;
 
@@ -22,15 +22,6 @@ removePics = function() {
         };
     };
 
-    //Original
-    // const parent = document.querySelector('.carouselSlide');
-    // const photosExist = document.getElementById("photos");
-    // if (photosExist !== null)
-    // {
-    //     while (photosExist) {
-    //         photosExist.parentNode.removeChild(photosExist);
-    //     };
-    // };
 }
 
 //Search Photos Function 
@@ -140,29 +131,4 @@ carouselSlide.addEventListener('click',(event) => {
             }
         }
     }
-
-
-
-    // const carouselImages = document.querySelectorAll('.carouselSlide img')
-    // console.log(carouselImages)
-
-    //only move if buttons are working
-    // if (buttonsWork === true) {
-    //     if (document.getElementById('likeBtn').name == "heart-outline") {
-    //         document.getElementById('likeBtn').name = "heart" //change icon
-
-
-    //         //add photos to favourites section 
-    //         const photos = document.getElementById("photos");
-    //         console.log(photos.src); //test
-
-    //         let photosClone = photos.cloneNode(true);
-    //         document.querySelector('#h2Favourites').append(photosClone);  //this works, but moves the OG file. Need to create copy. 
-
-
-    //     }
-    //     else {
-    //         document.getElementById('likeBtn').name = "heart-outline"
-    //     }
-    // }
 })

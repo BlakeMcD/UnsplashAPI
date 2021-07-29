@@ -33,9 +33,9 @@ body {
     margin: 0px;
     box-sizing: border-box;
 
-    width: 1000px;
+    width: 600px;
     margin: auto;
-    overflow: hidden;
+    /* overflow: hidden; */
     border: 5px solid black;
 
     position: relative;
@@ -43,7 +43,7 @@ body {
 
 .carouselSlide {
     display: flex;
-    width: 1000px; 
+    width: 600px; 
     height: auto;
 }
 
@@ -71,7 +71,13 @@ body {
     border: 5px solid black;
 }
 
-#likeBtn {
+.likeBtn { 
+    color: black;
+    cursor: pointer;
+    font-size: 100px;
+    position: absolute;
+}
+/* .likeBtn {
     position: absolute;
     top: 0%;
     z-index: 10px;
@@ -80,15 +86,15 @@ body {
     cursor: pointer;
     right: 0;
     border: 5px solid black;
-}
+} */
 
 .photos {
     display: grid;
-    justify-items: center;
+    justify-items: right;
 }
 
 .carouselImage {
-    width: 1000px;
-    height: 1000px;
+    width: 600px;
+    height: 600px;
     object-fit: cover;
 }
