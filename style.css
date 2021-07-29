@@ -81,3 +81,14 @@ body {
     right: 0;
     border: 5px solid black;
 }
+
+.photos {
+    display: grid;
+    justify-items: center;
+}
+
+.carouselImage {
+    width: 1000px;
+    height: 1000px;
+    object-fit: cover;
+}
