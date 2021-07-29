@@ -122,7 +122,8 @@ carouselSlide.addEventListener('click',(event) => {
                 console.log(photo); //test
     
                 let photoClone = photo.cloneNode(true);
-                document.querySelector('#h2Favourites').append(photoClone);  //this works, but moves the OG file. Need to create copy. 
+                //document.querySelector('#h2Favourites').append(photoClone); 
+                document.querySelector('.favourites').append(photoClone); 
     
     
             }

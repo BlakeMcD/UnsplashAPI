@@ -35,7 +35,7 @@ body {
 
     width: 600px;
     margin: auto;
-    /* overflow: hidden; */
+    overflow: hidden;
     border: 5px solid black;
 
     position: relative;
@@ -50,7 +50,7 @@ body {
 
 #prevBtn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     z-index: 10px;
     font-size: 100px;
     color: black;
@@ -62,7 +62,7 @@ body {
 
 #nextBtn {
     position: absolute;
-    top: 50%;
+    top: 45%;
     z-index: 10px;
     font-size: 100px;
     color: black;
@@ -98,3 +98,4 @@ body {
     height: 600px;
     object-fit: cover;
 }
+
