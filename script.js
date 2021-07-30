@@ -4,7 +4,7 @@ let buttonsWork = false;
 
 //Initialise Variables about Slideshow movement
 const carouselSlide = document.querySelector('.carouselSlide');
-const size = 600;
+const size = 720;
 let translate = 0;
 let counter = 1;
 
@@ -93,11 +93,11 @@ nextBtn.addEventListener('click',() => {
         }
 
         if (counter  > 1) {
-            document.getElementById("prevBtn").style.color = "black";  //set button of PREV to black
+            document.getElementById("prevBtn").style.color = "#FFDF65";  //set button of PREV to black
         }
         
         if (counter  >= 5) {
-            document.getElementById("nextBtn").style.color = "grey";  //set button of NEXT to grey
+            document.getElementById("nextBtn").style.color = "#E8E8DB";  //set button of NEXT to grey
         }
     }
 })
@@ -121,11 +121,11 @@ prevBtn.addEventListener('click',() => {
 
         //set colour of buttons
         if (counter  <= 1) {
-            document.getElementById("prevBtn").style.color = "grey";  //set button of PREV to grey
+            document.getElementById("prevBtn").style.color = "E8E8DB";  //set button of PREV to grey
         } 
         
         if (counter  < 5) {
-            document.getElementById("nextBtn").style.color = "black";  //set button of NEXT to black
+            document.getElementById("nextBtn").style.color = "#FFDF65";  //set button of NEXT to black
         }
     }
 })
@@ -145,6 +145,8 @@ carouselSlide.addEventListener('click',(event) => {
     
                 let photoClone = photo.cloneNode(true);
                 //document.querySelector('#h2Favourites').append(photoClone); 
+                photoClone.classList.remove("carouselImage")
+                photoClone.classList.add("favouritePhoto")
                 document.querySelector('.favourites').append(photoClone); 
     
     

@@ -23,3 +23,13 @@ https://api.unsplash.com/search/collections?page=1&query=office
 
 Empty Heart: <ion-icon name="heart-outline"></ion-icon>
 Filled Heart: <ion-icon name="heart"></ion-icon>
+
+
+            //change colour of button
+            //select counter 
+            if (counter == 1) {
+            document.getElementById("prevBtn").style.color = "grey";
+            }
+            else {
+            document.getElementById("prevBtn").style.color = "black";    
+            }

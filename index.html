@@ -1,22 +1,29 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Hello World!</title>
+    <!-- Import Fonts -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+    </style>
+
+    <title>Find Five</title>
 </head>
+
 <body>
 
     <div class="hero">
         <div class="heroText">
             <h1>Find Five</h1>
+            <input type="text" id="search" placeholder="type search here...">
+            <button onclick="searchPhotos()" id = "searchButton">Search</button>
             <p id="heroParagraph">Search our photo database and view the top five picks</p>
-            <input type="text" id="search" placeholder="Travel, people, retro cameras, and more...">
-            <button onclick="searchPhotos()">Search</button>
+
+
 
 
         </div>
@@ -27,20 +34,19 @@
     <div class="images">
         <h2>Your Selection</h2>
         <div id="results"></div>
-
     </div>
 
     <!--Carousel Container-->
     <div class="carouselContainer">
         <div class="carouselSlide"></div>
-            <ion-icon name="chevron-back-circle-outline" id="prevBtn"></ion-icon>
-            <ion-icon name="chevron-forward-circle-outline" id="nextBtn"></ion-icon>
-        </div>
+        <ion-icon name="chevron-back-circle-outline" id="prevBtn"></ion-icon>
+        <ion-icon name="chevron-forward-circle-outline" id="nextBtn"></ion-icon>
     </div>
 
-    <h2 id = "h2Favourites">Favourites</h2>
-    <div class="favourites"></div>
-
+    <div id="favouritesSection">
+        <h2 id="h2Favourites">Favourites</h2>
+        <div class="favourites"></div>
+    </div>
 
     <footer></footer>
 
