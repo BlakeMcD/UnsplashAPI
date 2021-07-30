@@ -79,58 +79,61 @@ function searchPhotos() {
 
 //Add Event listeners for prev/next buttons, and sort out movement
 nextBtn.addEventListener('click',() => {
-    {
+    
     const carouselImages = document.querySelectorAll('.carouselSlide img')
     console.log(carouselImages)
 
 
     //only move if buttons are working
-        if (buttonsWork === true) {
-            if (counter >= 5) return; //so it can't scroll past 5
-            counter ++;
-            console.log(counter);
-            translate -= size;
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            carouselSlide.style.transform = 'translateX(' + translate + 'px)';
-            console.log(carouselImages[counter])
-        }
+    if (buttonsWork === true) {
+        if (counter >= 5) return; //so it can't scroll past 5
+        counter ++;
+        console.log(counter);
+        translate -= size;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        carouselSlide.style.transform = 'translateX(' + translate + 'px)';
+        console.log(carouselImages[counter])
+    }
 
-        if (counter  > 1) {
-            document.getElementById("prevBtn").style.color = "#FFDF65";  //set button of PREV to black
-        }
-        
-        if (counter  >= 5) {
-            document.getElementById("nextBtn").style.color = "#E8E8DB";  //set button of NEXT to grey
-        }
+    if (counter > 1) {
+        document.getElementById("prevBtn").style.color = "#FFDF65";  //set button of PREV to yellow
+        console.log("test 1")
+    }
+    
+    if (counter  >= 5) {
+        document.getElementById("nextBtn").style.color = "#E8E8DB";  //set button of NEXT to grey
+        console.log("test 2")
     }
 })
 
 prevBtn.addEventListener('click',() => {
-    {
+
     const carouselImages = document.querySelectorAll('.carouselSlide img')
     console.log(carouselImages)
 
 
-        //only move if buttons are working
-        if (buttonsWork === true) {
-            if (counter <= 1) return; //so it can't scroll below 0
-            counter --;
-            console.log(counter);
-            translate += size;
-            carouselSlide.style.transition = "transform 0.4s ease-in-out";
-            carouselSlide.style.transform = 'translateX(' + translate + 'px)';
-            console.log(carouselImages[counter])
-        }
+    //only move if buttons are working
+    if (buttonsWork === true) {
+        if (counter <= 1) return; //so it can't scroll below 0
+        counter --;
+        console.log(counter);
+        translate += size;
+        carouselSlide.style.transition = "transform 0.4s ease-in-out";
+        carouselSlide.style.transform = 'translateX(' + translate + 'px)';
+        console.log(carouselImages[counter])
+    }
 
         //set colour of buttons
-        if (counter  <= 1) {
-            document.getElementById("prevBtn").style.color = "E8E8DB";  //set button of PREV to grey
+    if (counter <= 1) {
+        document.getElementById("prevBtn").style.color = "#E8E8DB";  //set button of PREV to grey
+        console.log("test 3")
         } 
-        
-        if (counter  < 5) {
-            document.getElementById("nextBtn").style.color = "#FFDF65";  //set button of NEXT to black
-        }
+    
+    if (counter  < 5) {
+        document.getElementById("nextBtn").style.color = "#FFDF65";  //set button of NEXT to yellow
+        console.log("test 4")
     }
+
 })
     
 //Add Event listeners for like button

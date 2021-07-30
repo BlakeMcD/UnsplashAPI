@@ -68,6 +68,8 @@ body {
 
 /*Carousel Container and Dimension */
 .carouselContainer {
+    /* display: grid; */
+    grid-template-areas: "prev image next";
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -95,6 +97,8 @@ body {
     font-size: 100px;
     color: #E8E8DB;
     cursor: pointer;
+    /* grid-area: prev; */
+    align-self: center;
     left: 0;
 
 }
@@ -106,6 +110,8 @@ body {
     font-size: 100px;
     color: #FFDF65;
     cursor: pointer;
+    grid-area: next;
+    align-self: center;
     right: 0;
 }
 
