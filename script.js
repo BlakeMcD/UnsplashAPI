@@ -29,6 +29,8 @@ function searchPhotos() {
     let clientId = "llmyDAM46Iyjezu-cd3FCEOJJepSNekA7Tg1STQTwKY";
     let query = document.getElementById("search").value;
 
+
+
     let url = "https://api.unsplash.com/search/photos?client_id="+clientId+"&query="+query;
 
     //test - remove anything that exists
@@ -63,6 +65,9 @@ function searchPhotos() {
         }
         //make previous and next buttons clickable
         buttonsWork = true;
+        
+        //reset counter to 1
+        //counter = 1;
     }) 
 }
 
@@ -86,6 +91,14 @@ nextBtn.addEventListener('click',() => {
             carouselSlide.style.transform = 'translateX(' + translate + 'px)';
             console.log(carouselImages[counter])
         }
+
+        if (counter  > 1) {
+            document.getElementById("prevBtn").style.color = "black";  //set button of PREV to black
+        }
+        
+        if (counter  >= 5) {
+            document.getElementById("nextBtn").style.color = "grey";  //set button of NEXT to grey
+        }
     }
 })
 
@@ -104,6 +117,15 @@ prevBtn.addEventListener('click',() => {
             carouselSlide.style.transition = "transform 0.4s ease-in-out";
             carouselSlide.style.transform = 'translateX(' + translate + 'px)';
             console.log(carouselImages[counter])
+        }
+
+        //set colour of buttons
+        if (counter  <= 1) {
+            document.getElementById("prevBtn").style.color = "grey";  //set button of PREV to grey
+        } 
+        
+        if (counter  < 5) {
+            document.getElementById("nextBtn").style.color = "black";  //set button of NEXT to black
         }
     }
 })
