@@ -29,7 +29,10 @@ function searchPhotos() {
     let clientId = "llmyDAM46Iyjezu-cd3FCEOJJepSNekA7Tg1STQTwKY";
     let query = document.getElementById("search").value;
 
-
+    counter = 1; 
+    translate = 0;
+    carouselSlide.style.transition = "transform 0.4s ease-in-out";
+    carouselSlide.style.transform = 'translateX(' + translate + 'px)';
 
     let url = "https://api.unsplash.com/search/photos?client_id="+clientId+"&query="+query;
 
